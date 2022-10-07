@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{F1431A94-E3B3-4331-9645-D915126A0341}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>kodnet</RootNamespace>
+    <AssemblyName>kodnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallSiteInvokers\Invoker.cs" />
+    <Compile Include="CallSiteInvokers\InvokerParam0.cs" />
+    <Compile Include="CallSiteInvokers\invokerParam1.cs" />
+    <Compile Include="CallSiteInvokers\invokerParam2.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam3.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam4.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam5.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam6.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam7.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam8.cs" />
+    <Compile Include="CallSiteInvokers\invokerparam9.cs" />
+    <Compile Include="ConstructorDescriptor.cs" />
+    <Compile Include="DelegateWrapper.cs" />
+    <Compile Include="DynamicValue.cs" />
+    <Compile Include="FieldDescriptor.cs" />
+    <Compile Include="Kodnet.cs" />
+    <Compile Include="MethodDescriptor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyDescriptor.cs" />
+    <Compile Include="TypeDescriptor.cs" />
+    <Compile Include="KodnetClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CallSiteInvokers" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jxshellbase\jxshellbase.csproj">
+      <Project>{a1e48f72-4b7b-461a-b22d-52d21c522ecf}</Project>
+      <Name>jxshellbase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
